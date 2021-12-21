@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.box-animation {
+    width: 110px;
+    height: 110px;
+    animation: loading 3s linear infinite;
+    display: flex;
+    margin-bottom: 90px;
+    border-radius: 50%;
+}
+
+
+.flex-end {
+    align-items: flex-end;
+}
+.right {
+    justify-content: right;
+}
+
+.box-left, .box-right {
+    position: absolute;
+}
+.box-left {
+    margin-left: -220px;
+    margin-top: 25px;
+}
+.box-right {
+    margin-right: -220px;
+    margin-top: -25px;
+}
+.animation-bottom-left {
+    margin-bottom: 10px;
+}
+.animation-top-right {
+    margin-bottom: 5px;
+}
+
+
+
+.animation1 {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid blue;   
+    box-shadow: 0px 0px 0px blue, 0px 0px 10px blue, 0px 0px 20px blue, 0px 0px 30px blue, 0px 0px 50px blue;
+    position: absolute;
+}
+/*BAIXO E ESQUERDA*/
+.line, .line-left {
+    width: 90px;
+    height: 50px;
+    border-radius: 100% 0px 100% 100%;
+    background-color: blue;
+    position: absolute;
+    margin: 0px 0px 5px 20px;
+    
+}
+.circle, .circle-left {
+    width: 87px;
+    height: 50px;
+    position: absolute;
+    border-radius: 0px 0px 50% 50%;
+    margin: 0px 0px 15px 22px;
+}
+
+
+/*CIMA E DIREITA*/
+.line1, .line-right {
+    width: 90px;
+    height: 50px;
+    border-radius: 100% 100% 100% 0%;
+    background-color: blue;
+    position: absolute;
+    margin: 5px 20px 0px 0px;
+    
+}
+.circle1, .circle-right {
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50% 50% 0% 0%;
+    margin: 15px 22px 0px 0px;
+}
+
+
+
+
+.circle, .line, .circle1, .line1, .circle-left, .circle-right, .line-left, .line-right {    
+    transform: rotate(-25deg);
+}
+
+.circle1, .circle, .box-animation, .circle-right, .circle-left {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+/*OUTRA CAIXA DE ANIMAÇAO
+@keyframes line {
+    0% {
+        top: calc(0% + 110px);
+    }
+    25% {
+        top: calc(100% - 100px);
+    }
+
+    50% {
+        top: calc(0% + 110px);
+    }
+
+    75% {
+        top: calc(100% - 100px);
+    }
+
+    100% {
+        top: calc(0% + 110px);
+    }
+}
+
+.box-animation-reto {
+    animation: line 13s linear infinite;
+    width: 110px;
+    height: 535px;
+    position: absolute;
+    margin-top: -35px;
+    display: flex;
+    justify-content: center;
+}*/
