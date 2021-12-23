@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+body {
+    background: #f5f5f5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 380px;
+    height: 200px;
+    background: #101010;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 0px 0px 10px black, 0px 0px 20px black, 0px 0px 30px black;
+}
+
+/* ESQUERDA */
+div::after {
+    content: 'Anima';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: white;
+    color: blue;
+    border-radius: 50%;
+    animation: left-right 3s linear infinite;
+    transition: linear 2s;
+}
+
+/* DIREITA */
+div::before {
+    content: 'tion';
+    margin-left: 180px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: blue;
+    color: white;
+    border-radius: 50%;   
+    transition: linear 2s; 
+    animation: right-left 3s linear infinite;
+}
+
+div::after, div::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+
+@keyframes left-right {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 200px;
+        background: blue;
+        color: white;
+        content: 'tion';
+    }
+}
+
+@keyframes right-left {
+    0% {
+        margin-left: 200px;
+    }
+    
+    100%  {
+        margin-left: 0;
+        background: white;
+        color: blue;
+        content: 'Anima';
+    }
+}
+
